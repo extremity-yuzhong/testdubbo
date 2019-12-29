@@ -1,0 +1,18 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo
+http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 应用配置，不要与提供方相同 -->
+    <dubbo:application name="dubbo-provider"/>
+
+    <!-- 注册中心配置，使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry address="zookeeper://hadoop003:2181" timeout="60000" />
+
+    <dubbo:protocol name="dubbo" port="20890"/>
+
+
+    <bean id="userService" class="com.test.dubbo.provider.UserServiceImpl"/>
+    <dubbo:service  interface="com.test.dubbo.client.UserService" ref="userService"/>
+</beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="hadoop-client" />
+        <module name="test-dubbo-client" />
+        <module name="test-dubbo-provider" />
+        <module name="test-dubbo-customer" />
+        <module name="hadoop-provider" />
+        <module name="hadoop-customer" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="hadoop-client" options="-parameters" />
+      <module name="hadoop-customer" options="-parameters" />
+      <module name="hadoop-provider" options="-parameters" />
+      <module name="test-dubbo-client" options="-parameters" />
+      <module name="test-dubbo-customer" options="-parameters" />
+      <module name="test-dubbo-provider" options="-parameters" />
+    </option>
+  </component>
+</project>
