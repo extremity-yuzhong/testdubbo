@@ -6,17 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="hadoop-client" />
+        <module name="com.test.dubbo.customer" />
+        <module name="com.test.dubbo.client" />
         <module name="test-dubbo-client" />
         <module name="test-dubbo-provider" />
         <module name="test-dubbo-customer" />
-        <module name="hadoop-provider" />
-        <module name="hadoop-customer" />
+        <module name="com.test.dubbo.provider" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hadoop-client" target="1.8" />
+      <module name="hadoop-customer" target="1.8" />
+      <module name="hadoop-provider" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="com.test.dubbo.client" options="-parameters" />
+      <module name="com.test.dubbo.customer" options="-parameters" />
+      <module name="com.test.dubbo.provider" options="-parameters" />
       <module name="hadoop-client" options="-parameters" />
       <module name="hadoop-customer" options="-parameters" />
       <module name="hadoop-provider" options="-parameters" />
