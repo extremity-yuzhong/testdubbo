@@ -12,9 +12,6 @@
         <module>com.test.dubbo.client</module>
         <module>com.test.dubbo.customer</module>
         <module>com.test.dubbo.provider</module>
-        <module>hadoop-client</module>
-        <module>hadoop-customer</module>
-        <module>hadoop-provider</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
